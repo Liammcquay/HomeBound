@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Sukhumvit Set";
+    src: url("assets/sukhumvit-set/SukhumvitSet-Text.ttf");
+}
+
+@font-face {
+    font-family: "KakuGothic";
+    src: url("assets/KakuGothic.otf");
+}
+
 #nav-bar {
     overflow: hidden;
     background-color: #333;
@@ -32,3 +42,6 @@
     font-size: 24px;
 }
 
+.top-link {
+    width: 22.41%;
+}
