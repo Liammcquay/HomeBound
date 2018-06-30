@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>HomeBound Project</title>
+    <link href="global.css" type="text/css" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body bgcolor="#D5C6B3">
 <header>
-    <nav class="top-bar">
-        <div style="width: 100%; text-align: center">
-            <div style="display: inline">
-                <label>
-                    <button class="home-button" type="button" onclick="window.location='index.html'">
-                        Home
-                    </button>
-                </label>
-            </div>
-            <div style="display: inline">
-                <label>
-                    <button class="about-button" type="button" onclick="window.location=''">
-                        About us
-                    </button>
-                </label>
-            </div>
-            <div style="display: inline">
-                <label>
-                    <button class="help-button" type="button" onclick="window.location=''">
-                        How you can help
-                    </button>
-                </label>
-            </div>
-            <div style="display: inline">
-                <label>
-                    <button class="contact-button" type="button" onclick="window.location=''">
-                        Contact us
-                    </button>
-                </label>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-bar" style="z-index: 5">
+        <a href="index.html">Home</a>
+        <a href="">About us</a>
+        <a href="">How you can help</a>
+        <a href="">Contact us</a>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            doScroll()
+        };
+
+        var navbar = document.getElementById("nav-bar");
+        var sticky = navbar.offsetTop;
+
+        function doScroll() {
+            if (window.pageYOffset >= sticky)
+                navbar.classList.add("sticky");
+            else
+                navbar.classList.remove("sticky");
+        }
+    </script>
 </header>
 <div class="title-bar">
-    <img src="assets/title.png" alt="image not found" style="width: 100%; opacity: 0.5" >
+    <img src="assets/title.png" alt="image not found" style="width: 100%; opacity: 1" >
     <div class="centered">
         <h1 class="title">HomeBound Project</h1>
     </div>
